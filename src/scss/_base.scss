@@ -1,0 +1,32 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $Font;
+  background-color: $bg-dark;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+// Container
+.container {
+  width: 90%;
+  margin: 0 auto;
+}

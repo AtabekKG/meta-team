@@ -1,0 +1,77 @@
+@import "../variables";
+@import "../mixin";
+@import "Courses-frontend/Courses-frontend";
+@import "Courses-java/Courses-java";
+@import "Courses-frontend/Register-course/Register-course";
+
+// 1) Courses Hero (Курсы)
+#courses-hero {
+  padding: 150px 0 157px 0;
+
+  .courses-hero {
+
+    &_links {
+      span {
+        font-weight: 400;
+        font-size: $font-size16;
+        color: #A5A5A5;
+        &.active {
+          color: $light;
+        }
+      }
+    }
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+      text-align: center;
+      padding: 47px 0 70px 0;
+    }
+    &_blogs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 30px;
+
+      &-blog {
+        height:320px;
+        padding: 42px 30px 30px 30px;
+        background: $light;
+        border-radius: 15px;
+        position: relative;
+
+        &_title {
+          font-weight: 700;
+          font-size: 24px;
+          color: $dark;
+        }
+        &_p {
+          font-weight: 400;
+          font-size: $font-size16;
+          line-height: 20px;
+          color: $dark;
+          padding: 17px 0 14px 0;
+        }
+        &_group {
+          @include d-f_al-c;
+          column-gap: 8px;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+
+          &-link {
+            font-weight: 700;
+            font-size: $font-size16;
+            color: $dark;
+            padding-bottom: 4px;
+            border-bottom: 1px solid $dark;
+          }
+          &-icon {
+            color: $dark;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+
+// Mixins
+@mixin alignment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin alignment-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin alignment-start {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+@mixin d-f_fd-c_al-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin d-f_fd-c_al-s {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+@mixin d-f_al-c {
+  display: flex;
+  align-items: center;
+}
+
+// Button
+@mixin button{
+  background: #034078;
+  border-radius: 5px;
+}
+
+
+
+
+
+

@@ -1,0 +1,419 @@
+@import "../../variables";
+@import "../../mixin";
+
+// 1) Section One (Главная / Мастер классы / Реактивное программирование на Java)
+#section-one {
+  padding: 150px 0;
+  .section-one {
+    &_links {
+      span {
+        font-weight: 400;
+        font-size: $font-size16;
+        color: #A5A5A5;
+
+        &.active {
+          color: $light;
+        }
+      }
+    }
+    &_group {
+      @include alignment-start;
+      padding-top: 72px;
+
+      &-left {
+        width: 58%;
+        &_title {
+          font-weight: 700;
+          font-size: $font-size36;
+          line-height: 44px;
+          color: $light;
+        }
+        p {
+          font-weight: 400;
+          font-size: $font-size20;
+          line-height: 24px;
+          color: $light;
+          padding: 30px 0 50px 0;
+        }
+        &_btn {
+          @include button;
+          padding: 18px 26px;
+          font-size: $font-size16;
+          color: $light;
+        }
+      }
+      &-right {
+        width: 28%;
+        &_group {
+          padding-bottom: 60px;
+          p {
+            font-weight: 400;
+            font-size: $font-size20;
+            color: $light;
+            padding-bottom: 15px;
+          }
+          span {
+            font-weight: 600;
+            font-size: $font-size20;
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 2) Section Two (Что, как и почему)
+#section-two {
+  padding-bottom: 150px;
+  .section-two {
+    &_title {
+      font-weight: 400;
+      font-size: $font-size16;
+      color: #A5A5A5;
+      padding-bottom: 50px;
+    }
+    &_group {
+      @include alignment-start;
+
+      &-left {
+        width: 68%;
+        &_title {
+          font-weight: 700;
+          font-size: $font-size36;
+          color: $light;
+          padding: 0 0 30px 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: $font-size20;
+          line-height: 24px;
+          color: $light;
+        }
+      }
+      &-right {
+        width: 25%;
+        @include d-f_fd-c_al-s;
+        row-gap: 60px;
+        padding-top: 76px;
+        &_group {
+          p {
+            font-weight: 400;
+            font-size: $font-size20;
+            color: $light;
+            padding-bottom: 15px;
+          }
+          span {
+            font-weight: 600;
+            font-size: $font-size20;
+            color: $light;
+          }
+        }
+      }
+    }
+    h2 {
+      font-weight: 600;
+      font-size: $font-size20;
+      color: $light;
+      margin-bottom: 39px;
+    }
+    &_list-group {
+      li {
+        list-style-type: disc;
+        list-style-position: inside;
+        font-weight: 400;
+        font-size: $font-size20;
+        color: $light;
+        margin-bottom: 21px;
+      }
+    }
+    &_buttons {
+      padding-top: 100px;
+      &-button {
+        font-weight: 500;
+        font-size: $font-size16;
+        color: $light;
+        padding: 25px 75px;
+        border-radius: 10px;
+      }
+      &-first {
+        background-color: $bg-light;
+        margin-right: 23px;
+      }
+      &-second {
+        border: 1px solid #044076;
+        background: transparent;
+      }
+
+    }
+  }
+}
+
+// 3) Section Three (ПРОГРАММА МАСТЕР-КЛАССА)
+#section-three {
+  padding-bottom: 160px;
+
+  .section-three {
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+      margin-bottom: 58px;
+    }
+    &_group {
+      @include alignment-start;
+
+      &-blogs {
+        width: 48%;
+        @include d-f_fd-c_al-s;
+        row-gap: 30px;
+
+        &_blog {
+          width: 100%;
+          border: 1px solid #044076;
+          border-radius: 10px;
+          background-color: transparent;
+          padding: 25px 0 25px 100px;
+          position: relative;
+
+          &-number {
+            font-weight: 700;
+            font-size: $font-size36;
+            color: $light;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+          }
+          details {
+            summary {
+              font-weight: 500;
+              font-size: $font-size16;
+              color: $light;
+              list-style: none;
+            }
+            div {
+              p {
+                padding: 23px 18px 0 0;
+                font-weight: 400;
+                font-size: $font-size20;
+                line-height: 24px;
+                color: $light;
+              }
+            }
+          }
+        }
+        &_btn {
+          @include button;
+          padding: 25px 76px;
+          font-weight: 500;
+          font-size: $font-size16;
+          color: $light;
+          display: inline-block;
+          margin-top: 28px;
+        }
+      }
+      &-bg {
+        width: 44%;
+        img {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+// 4) Section Four (Евгений Александрович)
+#section-four {
+  padding-bottom: 150px;
+  .section-four {
+    @include d-f_fd-c_al-c;
+    row-gap: 20px;
+    width: 70%;
+    margin: 0 auto;
+    &_bg {
+      width: 40%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+    span {
+      font-weight: 500;
+      font-size: $font-size20;
+      color: #A5A5A5;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+    }
+  }
+}
+
+// 5) Section Five (Процесс обучения)
+#section-five {
+  padding-bottom: 150px;
+
+  .section-five {
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+    }
+    &_p {
+      width: 70%;
+      font-weight: 400;
+      font-size: $font-size20;
+      line-height: 24px;
+      color: $light;
+      margin: 30px 0 84px 0
+    }
+    &_group {
+      @include alignment-start;
+
+      &-blogs {
+        width: 57%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+
+        &_blog {
+          padding: 56px 25px;
+          background: linear-gradient(180deg, rgba(0, 84, 160, 0.2) 0%, rgba(0, 11, 48, 0.2) 100%);
+          border: 1px solid #0272CE;
+          backdrop-filter: blur(22px);
+          border-radius: 10px;
+          text-align: center;
+          span {
+            font-weight: 700;
+            font-size: $font-size36;
+            color: $light;
+          }
+          h3 {
+            padding: 20px 0;
+            font-weight: 500;
+            font-size: $font-size20;
+            color: $light;
+          }
+          p {
+            font-weight: 600;
+            font-size: $font-size16;
+            line-height: 20px;
+            color: $light;
+          }
+        }
+      }
+      &-blog {
+        width: 34%;
+        background: $light;
+        border-radius: 10px;
+        padding: 50px 35px;
+
+        &_p {
+          font-weight: 700;
+          font-size: $font-size16;
+          line-height: 20px;
+          color: $dark;
+        }
+        &_price {
+          display: block;
+          font-weight: 700;
+          font-size: $font-size36;
+          color: $dark;
+          margin: 30px 0;
+        }
+        &_group {
+          @include d-f_al-c;
+          column-gap: 8px;
+          margin-bottom: 25px;
+          &-icon {
+            font-size: 22px;
+            color: $dark;
+          }
+          p {
+            font-weight: 500;
+            font-size: $font-size16;
+            color: $dark;
+          }
+        }
+        &_btn {
+          @include button;
+          font-weight: 500;
+          font-size: $font-size16;
+          color: $light;
+          padding: 25px 77px;
+        }
+      }
+    }
+  }
+}
+
+// 6) Section Six (Остались вопросы?)
+#section-six {
+  padding-bottom: 180px;
+  .section-six {
+    span {
+      font-weight: 500;
+      font-size: $font-size20;
+      color: #A5A5A5;
+    }
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+      margin: 29px 0 89px 0;
+    }
+    &_desc {
+      width: 60%;
+      &-accordion {
+        padding-bottom: 10px;
+        border-bottom: 1.5px solid #767676;
+        margin-bottom: 30px;
+        input {
+          display: none;
+        }
+
+        &_label {
+          @include alignment;
+
+          p {
+            width: 645px;
+            font-size: $font-size20;
+            line-height: 24px;
+            color: $light;
+          }
+          &-icon {
+            color: $light;
+            font-size: 22px;
+          }
+        }
+
+        &_content {
+          margin-top: 2px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.6s ease-in;
+
+          div {
+            font-weight: 400;
+            font-size: $font-size16;
+            line-height: 24px;
+            color: $light;
+            padding: 15px 0;
+          }
+        }
+
+        input:checked + .section-six_desc-accordion_label .section-six_desc-accordion_label-icon {
+          transform: rotate(180deg);
+        }
+
+        input:checked ~ .section-six_desc-accordion_content {
+          max-height: 500px;
+        }
+      }
+    }
+
+  }
+}

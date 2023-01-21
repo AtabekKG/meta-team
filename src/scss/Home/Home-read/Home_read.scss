@@ -1,0 +1,353 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+// 1) Inner hero (Главная / Статья / Мы подготовили... )
+#read-hero {
+  padding-top: 170px;
+
+  .read-hero {
+    &_top {
+      span {
+        font-weight: 400;
+        font-size: $font-size16;
+        color: #A5A5A5;
+      }
+
+      .active {
+        color: $light;
+      }
+    }
+
+    &_date {
+      font-weight: 400;
+      font-size: $font-size16;
+      color: #A5A5A5;
+      display: inline-block;
+      padding: 25px 0 30px 0;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      line-height: 44px;
+      color: $light;
+    }
+
+    &_p {
+      width: 80%;
+      padding: 20px 0 50px 0;
+      font-weight: 500;
+      font-size: $font-size20;
+      line-height: 24px;
+      color: $light;
+    }
+
+    &_bg {
+      img {
+        width: 100%;
+      }
+    }
+
+    &_list-group {
+      @include d-f_fd-c_al-s;
+      row-gap: 30px;
+
+      li {
+        list-style-position: inside;
+        list-style-type: disc;
+        font-weight: 500;
+        font-size: 18px;
+        color: $light;
+      }
+    }
+
+    &_block {
+      @include alignment-start;
+      padding: 40px 70px;
+      background: $light;
+      border-radius: 10px;
+      margin: 100px 0 70px 0;
+
+      &-bg {
+        width: 8%;
+      }
+
+      &-desc {
+        width: 50%;
+
+        h2 {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 34px;
+          color: $dark;
+        }
+
+        div {
+          @include d-f_al-c;
+          column-gap: 9px;
+          padding-top: 20px;
+
+          p, span {
+            font-weight: 500;
+            font-size: $font-size16;
+          }
+
+          p {
+            color: #8D8D8D;
+          }
+
+          span {
+            color: #000000;
+          }
+        }
+      }
+
+      &-link {
+        @include button;
+        padding: 21px 22px;
+        font-weight: 600;
+        font-size: $font-size16;
+        color: $light;
+      }
+    }
+  }
+}
+
+// 2) Inner Comment
+#read-comment {
+  .read-comment {
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+    }
+
+    &_block {
+      @include alignment-start;
+      padding: 40px 70px;
+      background: $light;
+      border-radius: 10px;
+      margin: 50px 0 100px 0;
+
+      &-bg {
+        width: 8%;
+      }
+
+      &-desc {
+        width: 50%;
+
+        h2 {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 34px;
+          color: $dark;
+        }
+
+        div {
+          @include d-f_al-c;
+          column-gap: 9px;
+          padding-top: 20px;
+
+          p {
+            font-weight: 500;
+            font-size: $font-size16;
+            color: #8D8D8D;
+          }
+        }
+      }
+
+      &-link {
+        @include button;
+        padding: 21px 51px;
+        font-weight: 600;
+        font-size: $font-size16;
+        color: $light;
+      }
+    }
+  }
+}
+
+// 3) Other Articles (Другие статьи )
+#other-articles {
+  padding-bottom: 150px;
+
+  .other-articles {
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      line-height: 44px;
+      color: $light;
+      padding-bottom: 60px;
+    }
+
+    &_blogs {
+      @include alignment;
+      column-gap: 25px;
+
+      &-blog {
+        padding: 26px 45px 26px 31px;
+        background: $light;
+        border-radius: 10.5502px;
+
+        &_title {
+          font-weight: 500;
+          font-size: 18.3527px;
+          color: #898989;
+        }
+
+        p {
+          font-weight: 600;
+          font-size: $font-size20;
+          line-height: 24px;
+          color: $dark;
+          padding: 15px 0 32px 0;
+        }
+
+        &_group {
+          @include alignment;
+
+          &-group {
+            @include d-f_al-c;
+            column-gap: 8px;
+
+            &_icon {
+              color: #044176;
+              font-size: 24px;
+            }
+
+            &_link {
+              font-weight: 500;
+              font-size: 19.4963px;
+              color: #044176;
+            }
+          }
+        }
+
+        span {
+          font-weight: 500;
+          font-size: 19.4963px;
+          color: #044176;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  // 1) Inner hero (Главная / Статья / Мы подготовили... )
+  #read-hero {
+    .read-hero {
+      &_title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      &_p {
+        font-size: 17px;
+      }
+
+      &_block {
+        flex-direction: column;
+        align-items: center;
+
+        &-desc {
+          width: 100%;
+          text-align: center;
+
+          div {
+            justify-content: center;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 2) Inner Comment
+  #read-comment {
+    .read-comment {
+      &_title {
+        font-size: 32px;
+        padding-top: 50px;
+      }
+
+      &_block {
+        flex-direction: column;
+        align-items: center;
+
+        &-desc {
+          width: 100%;
+          text-align: center;
+
+          div {
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 3) Other Articles (Другие статьи )
+  #other-articles {
+    .other-articles {
+      &_blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  // 1) Inner hero (Главная / Статья / Мы подготовили... )
+  #read-hero {
+    .read-hero {
+      &_block {
+        &-desc {
+          h2 {
+            font-size: 23px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  // 2) Inner Comment
+  #read-comment {
+    .read-comment {
+      &_block {
+        &-desc {
+          h2 {
+            font-size: 24px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  // 3) Other Articles (Другие статьи )
+  #other-articles {
+    .other-articles {
+      &_title {
+        text-align: center;
+      }
+      &_blogs {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+

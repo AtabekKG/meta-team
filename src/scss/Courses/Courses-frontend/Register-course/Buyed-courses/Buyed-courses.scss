@@ -1,0 +1,229 @@
+@import "../../../../variables";
+@import "../../../../mixin";
+
+// Main Header
+#header {
+  .header {
+    &-buttons {
+      &_bell-icon {
+        font-size: 24px;
+        color: $light;
+      }
+      &_profile {
+        font-weight: 400;
+        font-size: 16px;
+        color: $light;
+        padding: 10px 41px;
+        background-color: transparent;
+        border: 2px solid #034078;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// 1)First Section (Главная / Мастер классы /Frontend разработчик)
+#first-section {
+  padding: 150px 0 180px 0;
+  .first-section {
+    &_links {
+      padding-bottom: 80px;
+      span {
+        font-weight: 400;
+        font-size: $font-size16;
+        color: #A5A5A5;
+
+        &.active {
+          color: $light;
+        }
+      }
+    }
+    &_group {
+      @include alignment-start;
+      justify-content: normal;
+      column-gap: 200px;
+
+      &-desc {
+        width: 45%;
+        h1 {
+          font-weight: 700;
+          font-size: $font-size36;
+          color: $light;
+        }
+        p {
+          font-weight: 400;
+          font-size: $font-size16;
+          line-height: 24px;
+          color: $light;
+        }
+      }
+      &-range {
+        width: 32%;
+        &_title {
+          font-weight: 700;
+          font-size: 20px;
+          color: $light;
+        }
+        &_blog {
+          @include d-f_fd-c_al-c;
+          align-items: end;
+          row-gap: 4px;
+          padding:30px 0;
+
+          span {
+            font-weight: 400;
+            font-size: 12px;
+            color: $light;
+          }
+          div {
+            width: 100%;
+            height: 10px;
+            background: #D9D9D9;
+            border-radius: 5px;
+
+            div {
+              width: 10%;
+              height: 10px;
+              background: #086EBB;
+              border-radius: 5px;
+            }
+          }
+        }
+        &_group {
+          width: 80%;
+          @include alignment-start;
+          &-blog {
+            width: 42%;
+            text-align: center;
+            p {
+              font-weight: 400;
+              font-size: $font-size16;
+              line-height: 24px;
+              color: $light;
+              padding-bottom: 15px;
+            }
+            span {
+              font-weight: 700;
+              font-size: 20px;
+              color: $light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 2) Course Program (ПРОГРАММА КУРСА )
+#course-program {
+  padding-bottom: 180px;
+  .course-program {
+    &_title {
+      font-weight: 700;
+      font-size: $font-size36;
+      color: $light;
+      margin-bottom: 50px;
+    }
+    &_group {
+      @include alignment-start;
+
+      &-video {
+        width: 45%;
+        iframe {
+          width: 100%;
+        }
+      }
+      &-blogs {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &_blog {
+          position: relative;
+          min-height: 80px;
+          border-bottom: 2px solid $bg-medium;
+          &-btn {
+            @include button;
+            font-weight: 500;
+            font-size: $font-size20;
+            text-transform: capitalize;
+            color: $light;
+            padding: 22px 28px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          details {
+            summary {
+              list-style: none;
+              font-weight: 500;
+              font-size: 20px;
+              text-transform: capitalize;
+              color: $light;
+              padding-left: 180px;
+            }
+            .blogs {
+              padding-top: 75px;
+              @include d-f_fd-c_al-s;
+              row-gap: 22px;
+              &-group {
+                width: 90%;
+                @include alignment-start;
+                justify-content: normal;
+                column-gap: 24px;
+                padding: 14px 17px;
+                transition: all .4s ease-in;
+                &_video {
+                  width: 20%;
+                  height: 65px;
+
+                  iframe {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                &_blog {
+                  width: 70%;
+                  h2 {
+                    font-weight: 500;
+                    font-size: $font-size20;
+                    text-transform: capitalize;
+                    color: $light;
+                    margin-bottom: 13px;
+                  }
+                  button {
+                    font-weight: 400;
+                    font-size: 12px;
+                    text-transform: capitalize;
+                    color: $light;
+                    padding: 6px 12px;
+                    background: rgba(27, 41, 89, 0.4);
+                    border-radius: 2px;
+                  }
+                }
+                &:hover {
+                  background: rgba(27, 41, 89, 0.4);
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+          &-btn2 {
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: capitalize;
+            color: $light;
+            padding: 7px 12px;
+            background: rgba(27, 41, 89, 0.4);
+            border-radius: 2px;
+            position: absolute;
+            top: 36px;
+            left: 180px;
+            z-index: 10;
+          }
+        }
+      }
+    }
+  }
+}
